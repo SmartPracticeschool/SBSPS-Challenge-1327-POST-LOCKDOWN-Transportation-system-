@@ -1,0 +1,1796 @@
+{
+  "intents": [
+    {
+      "intent": "phonenumber",
+      "examples": [
+        {
+          "text": "836748346"
+        },
+        {
+          "text": "74092472"
+        },
+        {
+          "text": "phno no 03949023487"
+        },
+        {
+          "text": "3i47937493"
+        },
+        {
+          "text": "my mobile number is 83479347393"
+        },
+        {
+          "text": "my phone number is 83434739"
+        },
+        {
+          "text": "my number is 39847394739"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "travel",
+      "examples": [
+        {
+          "text": "I want to travel to srikalahasti at 3:00am"
+        },
+        {
+          "text": "I want to travel to hyderabad at 3 'o' clock on next Wednesday"
+        },
+        {
+          "text": "I want to travel to Chennai on 7th at 10pm"
+        },
+        {
+          "text": "I want to travel from Tirupati to banglore"
+        },
+        {
+          "text": "I want to travel from Tirupati to vijayawada on 29-06-2020 at 5 evening"
+        },
+        {
+          "text": "I want to travel from tiruvanantha puram at 11 am on 1-07-20"
+        },
+        {
+          "text": "I want to travel from Tirupati to kochi at 10pm on friday"
+        },
+        {
+          "text": "I would like to travel araku"
+        },
+        {
+          "text": "I would like to travel from tpd to skt of 4 people"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "bus_info",
+      "examples": [
+        {
+          "text": "I like to travel in private travels"
+        },
+        {
+          "text": "RTC is fine"
+        },
+        {
+          "text": "private travels is fine"
+        },
+        {
+          "text": "anything is fine"
+        },
+        {
+          "text": "no worry anything is fine"
+        },
+        {
+          "text": "I want to travel in rtc"
+        },
+        {
+          "text": "I want to travel in private travels"
+        },
+        {
+          "text": "I want to travel in road transport corporation"
+        },
+        {
+          "text": "Either rtc or travels both are fine"
+        },
+        {
+          "text": "I like to travel in rtc"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "what are the offers available"
+        },
+        {
+          "text": "what are the available routes"
+        },
+        {
+          "text": "what will be the starting price"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greet",
+      "examples": [
+        {
+          "text": "hlo"
+        },
+        {
+          "text": "hola"
+        },
+        {
+          "text": "morning"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "halo"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hi"
+        }
+      ],
+      "description": "basic greetings"
+    },
+    {
+      "intent": "price_segment",
+      "examples": [
+        {
+          "text": "it will be better on top"
+        },
+        {
+          "text": "I would like to travel on first price segment"
+        },
+        {
+          "text": "I would prefer 1001"
+        },
+        {
+          "text": "I like first one"
+        },
+        {
+          "text": "I would prefer 500-1000"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "typeofbus",
+      "examples": [
+        {
+          "text": "I would travel in ac bus"
+        },
+        {
+          "text": "I would prefer ac bus"
+        },
+        {
+          "text": "I like to travel in ac bus"
+        },
+        {
+          "text": "I like to travel in non ac bus"
+        },
+        {
+          "text": "I would prefer non-ac bus"
+        },
+        {
+          "text": "I would travel in non ac bus"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "starting price",
+          "synonyms": [
+            "starting prices",
+            "prices starting at",
+            "starting rate"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "routes",
+          "synonyms": [
+            "places",
+            "cites"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "offer",
+            "discount"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "diffbus",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Private Travels",
+          "synonyms": [
+            "travels",
+            "private",
+            "private travelling"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "RTC",
+          "synonyms": [
+            "Road Transport corporation ",
+            "apsrtc",
+            "tsrtc",
+            "tnsrtc",
+            "ksrtc"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greet",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hello",
+          "synonyms": [
+            "hlo",
+            "hello",
+            "hllo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good evening",
+          "synonyms": [
+            "gud eve",
+            "gd eve",
+            "evening",
+            "ge"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": [
+            "hii",
+            "hi",
+            "hola"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "gud aftnoon",
+            "gd aftnoon",
+            "noon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gm",
+            "gud mrng ",
+            "mrng ",
+            "gud mrg"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "mobile-number",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "00000000000",
+          "patterns": [
+            "09876543232"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "bustype",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "AC",
+          "synonyms": [
+            "air conditioning ",
+            "air conditioner ",
+            "ac",
+            "air condition"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "non-ac",
+          "synonyms": [
+            "non ac",
+            "no ac",
+            "without ac",
+            "ac not",
+            "Wouldn't prefer ac"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "price_segment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "500-1000",
+          "synonyms": [
+            "first one",
+            "one ",
+            "least one",
+            "cheap ",
+            "cheap option",
+            "500",
+            "less than 1000"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "1501-2500",
+          "synonyms": [
+            "top one",
+            "best one",
+            "luxury option",
+            "1500",
+            "1500 and above",
+            "above 1500"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "1001-1500",
+          "synonyms": [
+            "mid one ",
+            "mid range",
+            "mid-range",
+            "middle one",
+            "less than 1500",
+            "grater than 1000"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cities",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "surat",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kanpur",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Thane",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jaipur",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lucknow",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bhopal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Indore",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nagpur",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chittoor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vijayawada",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rajamandri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "warangal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "karnool",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ongole",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "kadapa",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Anantapur",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "arak",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "srisailam",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "vijayanagaram",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "araku",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chennai",
+          "synonyms": [
+            "Madras ",
+            "chennai"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Srikalahasti",
+          "synonyms": [
+            "skt",
+            "kalahasti",
+            "skit"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Bangalore",
+          "synonyms": [
+            "benguluru",
+            "bng",
+            "bungler"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Mysore",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hyderabad",
+          "synonyms": [
+            "hyd"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Coimbatore",
+          "synonyms": [
+            "coimbatoore"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Madurai",
+          "synonyms": [
+            "madurai"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "rameshwaram",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pondicherry",
+          "synonyms": [
+            "pudicherry"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Kasi",
+          "synonyms": [
+            "Kasi khestram"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nellore",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mumbai",
+          "synonyms": [
+            "bombay"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "srinagar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "delhi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "visakapattanam",
+          "synonyms": [
+            "vizag"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ahmedabad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kolkata",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pune",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "enter mobile no",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "enter your mobile number"
+              },
+              {
+                "text": "enter your phone number"
+              },
+              {
+                "text": "enter your cell number"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593281586888",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1593335103664"
+      },
+      "dialog_node": "node_10_1593336747745",
+      "previous_sibling": "node_6_1593330474491"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "which travel would you prefer"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593281586888",
+      "disabled": true,
+      "dialog_node": "response_10_1593282499511",
+      "previous_sibling": "node_10_1593336747745"
+    },
+    {
+      "type": "frame",
+      "title": "bus avail reflection",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you have selected to travel in $diffbus..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593281586888",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593336747745"
+      },
+      "conditions": "#bus_info",
+      "dialog_node": "node_6_1593330474491"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "@greet:hello",
+      "dialog_node": "response_3_1592903211476",
+      "previous_sibling": "response_2_1592903195021"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "HI"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "@greet:hi",
+      "dialog_node": "response_2_1592903195021",
+      "previous_sibling": "response_1_1592859566552"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1592939886585",
+      "previous_sibling": "response_3_1592903211476"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "@greet:(good afternoon)",
+      "dialog_node": "response_7_1592859519872",
+      "previous_sibling": "response_4_1592859339033"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "#greet",
+      "dialog_node": "response_1_1592859566552",
+      "previous_sibling": "response_7_1592859555746"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "@greet:(good evening)",
+      "dialog_node": "response_7_1592859555746",
+      "previous_sibling": "response_7_1592859519872"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1592856603093",
+      "conditions": "@greet:(good morning)",
+      "dialog_node": "response_4_1592859339033"
+    },
+    {
+      "type": "frame",
+      "title": "type of bus reply",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you want to trave $bustype bus \nokay"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593283137127",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1593281586888"
+      },
+      "conditions": "#typeofbus",
+      "dialog_node": "node_6_1593331110915"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter your mobile number"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1593335204358",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1593335204368",
+      "previous_sibling": "handler_9_1593335204368"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1593335204358",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_9_1593335204368"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you selected 1501-2500 price segment bus availability "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593342339720",
+      "conditions": "@price_segment:1501-2500",
+      "dialog_node": "response_3_1593343045481"
+    },
+    {
+      "type": "standard",
+      "title": "transaction id",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you can pay the amount to the bus dirver at the time of you reach the bus..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1593328911750",
+      "dialog_node": "node_3_1593337352272"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1593335103664",
+      "variable": "$number",
+      "dialog_node": "slot_9_1593335204358",
+      "previous_sibling": "node_8_1593328911750"
+    },
+    {
+      "type": "standard",
+      "title": "final ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your travel from TIRUPATI to $city of $number tickets on $date at $time ticket confirmation will be held in an hour which you will be notified as text msg, WhatsApp text and this platform too"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593335103664",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1593335775545"
+      },
+      "conditions": "$",
+      "dialog_node": "node_8_1593328911750"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593341213221",
+      "variable": "$segment",
+      "dialog_node": "slot_5_1593341232599",
+      "previous_sibling": "node_9_1593283137127"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1593341213221",
+      "dialog_node": "response_5_1593342326667",
+      "previous_sibling": "response_6_1593341825859"
+    },
+    {
+      "type": "standard",
+      "title": "type of bus",
+      "output": {
+        "generic": [
+          {
+            "title": "which type of bus would you prefer",
+            "options": [
+              {
+                "label": "AC",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "non-AC",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1593341213221",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1593331110915"
+      },
+      "dialog_node": "node_9_1593283137127",
+      "previous_sibling": "response_5_1593342326667"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593341213221",
+      "variable": "$price_segment_500_1000",
+      "dialog_node": "slot_6_1593341638180",
+      "previous_sibling": "slot_10_1593341259003"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593341213221",
+      "variable": "$price_segment_1501_2500",
+      "dialog_node": "slot_10_1593341259003",
+      "previous_sibling": "slot_5_1593341232599"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you selected 1001 to 1500 price segment bus availability "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1593341213221",
+      "conditions": "@price_segment:1001-1500",
+      "dialog_node": "response_6_1593341825859"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1593341259003",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1593341259006",
+      "previous_sibling": "handler_4_1593341259006"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1593341259003",
+      "context": {
+        "price_segment_1501_2500": "@price_segment:1501-2500"
+      },
+      "conditions": "@price_segment:1501-2500",
+      "event_name": "input",
+      "dialog_node": "handler_4_1593341259006"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the time you prefer"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1593334078199",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1593334078201",
+      "previous_sibling": "handler_5_1593334078201"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1593334078199",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_5_1593334078201"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the date you prefer in the format of dd-mm-yyyy"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1593334123905",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1593334123906",
+      "previous_sibling": "handler_2_1593334123906"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1593334123905",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_2_1593334123906"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the type of bus you want to go"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1593331415118",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1593331415124",
+      "previous_sibling": "handler_3_1593331415124"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1593331415118",
+      "context": {
+        "bustype": "@bustype"
+      },
+      "conditions": "@bustype",
+      "event_name": "input",
+      "dialog_node": "handler_3_1593331415124"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you have selected 500-100 price segment bus availability"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593343088213",
+      "conditions": "@price_segment:500-1000",
+      "dialog_node": "response_2_1593343116881"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1593341638180",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1593341638183",
+      "previous_sibling": "handler_5_1593341638183"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1593341638180",
+      "context": {
+        "price_segment_500_1000": "@price_segment:500-1000"
+      },
+      "conditions": "@price_segment:500-1000",
+      "event_name": "input",
+      "dialog_node": "handler_5_1593341638183"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the no of tickets you want"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1593274937021",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1593274937023",
+      "previous_sibling": "handler_8_1593274937023"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1593274937021",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1593274937023"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the type of bus"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1593330501853",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1593330501861",
+      "previous_sibling": "handler_8_1593330501861"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1593330501853",
+      "context": {
+        "diffbus": "@diffbus"
+      },
+      "conditions": "@diffbus",
+      "event_name": "input",
+      "dialog_node": "handler_8_1593330501861"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1593330474491",
+      "variable": "$diffbus",
+      "dialog_node": "slot_7_1593330501853"
+    },
+    {
+      "type": "standard",
+      "title": "bus availability       ",
+      "output": {
+        "generic": [
+          {
+            "title": "which travel would you prefer?",
+            "options": [
+              {
+                "label": "RTC",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "TRAVELS",
+                "value": {
+                  "input": {
+                    "text": "Issued by the private travels agency's "
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1593331110915",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1593330474491"
+      },
+      "conditions": "@diffbus",
+      "dialog_node": "node_6_1593281586888",
+      "previous_sibling": "slot_9_1593331415118"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1593331110915",
+      "variable": "$bustype",
+      "dialog_node": "slot_9_1593331415118"
+    },
+    {
+      "type": "standard",
+      "title": "precaution and necessary ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Before entering the bus you need to carry your mask with you as it is necessary where without mask there will be no allowance into the bus,"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593337352272",
+      "dialog_node": "node_8_1593335775545"
+    },
+    {
+      "type": "frame",
+      "title": "mobile no",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your mobile no $num is entered"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593336747745",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1593328911750"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_5_1593335103664"
+    },
+    {
+      "type": "standard",
+      "title": "price segment low",
+      "parent": "node_7_1593338142581",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1593281586888"
+      },
+      "conditions": "#price_segment",
+      "dialog_node": "node_7_1593343088213",
+      "previous_sibling": "node_7_1593342339720"
+    },
+    {
+      "type": "standard",
+      "title": "price segment 2",
+      "parent": "node_7_1593338142581",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1593283137127"
+      },
+      "conditions": "#price_segment",
+      "dialog_node": "node_7_1593342339720",
+      "previous_sibling": "node_2_1593341213221"
+    },
+    {
+      "type": "standard",
+      "title": "price segment",
+      "parent": "node_7_1593338142581",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1593281586888"
+      },
+      "conditions": "#price_segment",
+      "dialog_node": "node_2_1593341213221"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "enter the city you want to travel"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1593274871244",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1593274871253",
+      "previous_sibling": "handler_2_1593274871253"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1593274871244",
+      "context": {
+        "city": "@cities"
+      },
+      "conditions": "@cities",
+      "event_name": "input",
+      "dialog_node": "handler_2_1593274871253"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1593266226021",
+      "dialog_node": "slot_2_1593266234893"
+    },
+    {
+      "type": "standard",
+      "title": "available places to travel",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "these are the available routes or places to Travel"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593271288321",
+      "dialog_node": "node_7_1593280662738",
+      "previous_sibling": "node_8_1593271813101"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "there is 20% off on all tickets you book from here"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593271288321",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_3_1593271397212",
+      "previous_sibling": "node_7_1593280662738"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "araku        Bangalore       benguluru, bng, bungler  Bhopal        Chennai       Madras , chennai  chittoor        Coimbatore       coimbatoore  delhi        Hyderabad       hyd  Indore        Jaipur        kadapa        Kanpur        karnool        Kasi       Kasi khestram  Kolkata        Lucknow        Madurai       madurai  mumbai       bombay  Mysore        Nagpur        Nellore        ongole        Pondicherry       pudicherry  pune        rajamandri        rameshwaram        Srikalahasti       skt, kalahasti, skit  srinagar        srisailam        surat        Thane        vijayanagaram        Vijayawada        visakapattanam       vizag  warangal      "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593271288321",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1593280662738"
+      },
+      "conditions": "@enquiry:routes",
+      "dialog_node": "response_5_1593278699393",
+      "previous_sibling": "response_10_1593271478045"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the ticket price starts at rs50"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593271288321",
+      "conditions": "@enquiry:(starting price)",
+      "dialog_node": "response_10_1593271478045",
+      "previous_sibling": "response_3_1593271397212"
+    },
+    {
+      "type": "standard",
+      "title": "travel2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "say where you want to travel ill check the availability."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593271288321",
+      "dialog_node": "node_8_1593271813101"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1593266234893",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1593266234901",
+      "previous_sibling": "handler_10_1593266234901"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1593266234893",
+      "event_name": "input",
+      "dialog_node": "handler_10_1593266234901"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1593274856477",
+      "variable": "$date",
+      "dialog_node": "slot_10_1593334123905",
+      "previous_sibling": "slot_9_1593334078199"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1593274856477",
+      "variable": "$time",
+      "dialog_node": "slot_9_1593334078199",
+      "previous_sibling": "slot_1_1593274937021"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1593274856477",
+      "variable": "$city",
+      "dialog_node": "slot_1_1593274871244",
+      "previous_sibling": "node_7_1593338142581"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1593274856477",
+      "variable": "$number",
+      "dialog_node": "slot_1_1593274937021",
+      "previous_sibling": "slot_1_1593274871244"
+    },
+    {
+      "type": "frame",
+      "title": "price segment ask",
+      "output": {
+        "generic": [
+          {
+            "title": "Enter the price segment you would like to proceed",
+            "options": [
+              {
+                "label": "500-1000",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "1001-1500",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "1501-2500",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1593274856477",
+      "conditions": "",
+      "dialog_node": "node_7_1593338142581"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1593341232599",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1593341232609",
+      "previous_sibling": "handler_3_1593341232609"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1593341232599",
+      "context": {
+        "segment": "@price_segment:1001-1500"
+      },
+      "conditions": "@price_segment:1001-1500",
+      "event_name": "input",
+      "dialog_node": "handler_3_1593341232609"
+    },
+    {
+      "type": "standard",
+      "title": "travel",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "we are offering travel services from Tirupati can you say your destination place to travel or ask for offers too."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "dialog_node": "node_4_1593266226021",
+      "previous_sibling": "node_9_1592856603093"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1593266226021"
+      },
+      "conditions": "#greet || @greet",
+      "dialog_node": "node_9_1592856603093",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1593271813101"
+      },
+      "conditions": "#enquiry",
+      "dialog_node": "node_5_1593271288321",
+      "previous_sibling": "node_4_1593266226021"
+    },
+    {
+      "type": "frame",
+      "title": "travel main",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okay fine..\nyou want to travel from Tirupati to $city  \nyou want $number tickets to travel on $date at $time ..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1593338142581"
+      },
+      "conditions": "#travel",
+      "dialog_node": "node_1_1593274856477",
+      "previous_sibling": "node_5_1593271288321"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1593274856477",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello..."
+              },
+              {
+                "text": "we are offering travel services from Tirupati can you say your destination place travel"
+              },
+              {
+                "text": "\n "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "trim",
+  "language": "en",
+  "description": "this is the main skill which im going to use in my project"
+}
